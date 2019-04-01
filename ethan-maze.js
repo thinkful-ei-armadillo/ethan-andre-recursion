@@ -61,3 +61,26 @@ const escape = function (maze, startRow, startCol) {
 };
 
 escape(startingMaze, 0, 0);
+
+
+
+
+
+// escape (maze, startRow, startCol)
+  // current = maze[startRow][startCol]
+  // up      = maze[startRow-1][startCol]
+  // right   = maze[startRow][startCol+1]
+  // down    = maze[startRow+1][startCol]
+  // left    = maze[startRow][startCol-1]
+
+  // if current === 'e'
+    // success, we found the exit
+
+  // if up,right,down,left are ALL non-navigable (blocked or visited)
+    // failure, we reached a dead end
+
+  // otherwise
+    // (one or more of up,right,down,left is navigable)
+
+    // loop clockwise looking for first navigable space and move to it
+      // recurse with updated maze an start position
